@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/termometro_humor"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model humor {
+  id         Int       @id @default(autoincrement())
+  humor      String?   @db.VarChar(100)
+  comentario String?   @db.Text
+  criado_em  DateTime? @default(now()) @db.Timestamp(0)
+  id_ws      String?   @db.VarChar(100)
+  ajuda      String?   @db.VarChar(45)
+}
