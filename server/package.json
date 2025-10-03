@@ -18,11 +18,11 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "db-pull-termometro": "npx prisma db pull --schema prisma/schema.termometro.prisma",
+    "db-pull-reciclar": "npx prisma db pull --schema prisma/schema.reciclar.prisma",
 
-    "db-push-termometro": "npx prisma db push --schema prisma/schema.termometro.prisma",
+    "db-push-reciclar": "npx prisma db push --schema prisma/schema.reciclar.prisma",
     
-    "db-generate-termomectro": "npx prisma generate --schema prisma/schema.termometro.prisma"
+    "db-generate-reciclar": "npx prisma generate --schema prisma/schema.reciclar.prisma"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
