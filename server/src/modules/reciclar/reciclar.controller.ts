@@ -11,8 +11,10 @@ import {
 import { ReciclarService } from "./reciclar.service";
 //====CREATE
 import { CreateDinheiroDto } from "./dto/create/create-dinheiro.dto";
-import { UpdateDinheiroDto } from "./dto/patch/update-dinheiro.dto";
+import { CreateFuncionarioDto } from "./dto/create/create-funcionario.dto";
 //====PATCH
+import { UpdateDinheiroDto } from "./dto/patch/update-dinheiro.dto";
+import { UpdateFuncionarioDto } from "./dto/patch/update-funcionario.dto";
 
 @Controller("reciclar")
 export class ReciclarController {

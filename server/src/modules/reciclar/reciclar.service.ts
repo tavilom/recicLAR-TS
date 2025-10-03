@@ -1,10 +1,12 @@
 import { BadGatewayException, BadRequestException, Injectable } from "@nestjs/common";
 import { PrismaServiceReciclar } from "src/prisma/prisma.service";
-import { Dinheiro } from "prisma/generated/reciclar";
+import { Dinheiro, Funcionario } from "prisma/generated/reciclar";
 //==CREATE
 import { CreateDinheiroDto } from "./dto/create/create-dinheiro.dto";
+import { CreateFuncionarioDto } from "./dto/create/create-funcionario.dto";
 //===PATHC
 import { UpdateDinheiroDto } from "./dto/patch/update-dinheiro.dto";
+import { UpdateFuncionarioDto } from "./dto/patch/update-funcionario.dto";
 
 @Injectable()
 export class ReciclarService {
@@ -19,7 +21,18 @@ export class ReciclarService {
     return this.prismaServiceControle.dinheiro.findMany();
   }
 
+  async findAllFuncionario(): Promise<Funcionario[]> {
+    return this.prismaServiceControle.funcionario.findMany();
+  }
+
   //=====POST=====
+
+
+  // async createFuncionario(dto: CreateFuncionarioDto) {
+  //   return this.prismaServiceControle.funcionario.create({
+  //     //TODO: Continuar com create
+  //   })
+  // }
 
   async createDinheiro(dto: CreateDinheiroDto) {
     return this.prismaServiceControle.dinheiro.create({
@@ -95,5 +108,5 @@ export class ReciclarService {
     }
   }
 
-  
+
 }
